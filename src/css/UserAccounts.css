@@ -1,0 +1,65 @@
+.accounts__main {
+  text-align: center;
+}
+
+.accounts__card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1375px) {
+  .accounts__card {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 275px;
+  }
+
+  .manage__profile__btn {
+    margin-top: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .accounts__card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .accounts__card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.accounts__title {
+  color: white;
+  margin-top: 125px;
+  font-size: 45px;
+  margin-bottom: 50px;
+}
+
+.account__avatar {
+  height: 200px !important;
+  width: 200px !important;
+  outline: none;
+  border: none;
+  margin: 10px;
+}
+
+.account__avatar:hover {
+  transform: scale(1.1);
+  transition: transform 450ms;
+}
+
+.account__name {
+  color: grey;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.manage__profile__btn:hover {
+  transform: scale(1.1);
+  transition: transform 450ms;
+}

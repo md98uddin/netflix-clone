@@ -2,6 +2,15 @@
   margin: 0;
 }
 
-.app {
+.app,
+.accounts__div {
   background-color: #111;
+  overflow: hidden;
+}
+
+.netflix__img__header {
+  margin: 15px;
+  height: 75px;
+  width: 150px;
+  line-height: 10px;
 }

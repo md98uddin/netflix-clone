@@ -1,25 +1,57 @@
 import React from "react";
-import "./App.css";
-import Banner from "./Banner";
-import requests from "./requests";
-import Row from "./Row";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import GenreCarousels from "./components/GenreCarousels";
+import UserAccounts from "./components/UserAccounts";
+
+const accounts = [
+  {
+    name: "Main",
+    id: "1XLSLRL",
+    image: require("./assets/images/wolf_avatar.jfif"),
+  },
+  {
+    name: "Secondary",
+    id: "1XLSRR",
+    image: require("./assets/images/cat_avatar.jfif"),
+  },
+  {
+    name: "Guest",
+    id: "1XLSRT",
+    image: require("./assets/images/panda_avatar.jfif"),
+  },
+  {
+    name: "Another",
+    id: "1XLSLRT",
+    image: require("./assets/images/wolf_avatar.jfif"),
+  },
+];
+
+function RenderUserAccounts() {
+  return (
+    <div className="accounts__div">
+      <img
+        src={require("./assets/images/netflix_logo.png").default}
+        className="netflix__img__header"
+      />
+      <UserAccounts accounts={accounts} />
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="app">
-      <Banner />
-      <Row
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={GenreCarousels} />
+        <Route path="/accounts" component={RenderUserAccounts} />
+        {/* <Route path="/accounts/create" component={RenderUserAccounts} /> */}
+      </Switch>
+    </Router>
   );
 }
 
