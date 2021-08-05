@@ -1,11 +1,14 @@
 * {
   margin: 0;
+  font-family: sans-serif;
 }
 
 .app,
-.accounts__div {
+.accounts__div,
+.add__profile__div {
   background-color: #111;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .netflix__img__header {

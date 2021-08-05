@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import GenreCarousels from "./components/GenreCarousels";
 import UserAccounts from "./components/UserAccounts";
+import AddProfile from "./components/AddProfile";
 
 const accounts = [
   {
@@ -43,13 +44,27 @@ function RenderUserAccounts() {
   );
 }
 
+function RenderAddAccount() {
+  return (
+    <div className="add__profile__div">
+      <AddProfile />
+    </div>
+  );
+}
+
 function App() {
+  const [profiles, addProfile] = useState(accounts);
+
+  function addAccount(account) {
+    addProfile(accounts.push(account));
+  }
+
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={GenreCarousels} />
-        <Route path="/accounts" component={RenderUserAccounts} />
-        {/* <Route path="/accounts/create" component={RenderUserAccounts} /> */}
+        <Route exact path="/accounts" component={RenderUserAccounts} />
+        <Route path="/accounts/create" component={RenderAddAccount} />
       </Switch>
     </Router>
   );

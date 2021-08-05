@@ -2,17 +2,20 @@ import React from "react";
 import "../App.css";
 import "../css/UserAccounts.css";
 import { Container, Row, Col, Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 function RenderAccounts({ accounts }) {
   if (accounts) {
     return accounts.map((account) => (
       <div className="avatar__div" key={account.id}>
-        <img
-          src={account?.image.default}
-          alt="account__avatar"
-          className="account__avatar img-thumbnail"
-          role="button"
-        />
+        <Link to="/">
+          <img
+            src={account?.image.default}
+            alt="account__avatar"
+            className="account__avatar img-thumbnail"
+            role="button"
+          />
+        </Link>
         <h5 className="account__name">{account.name}</h5>
       </div>
     ));
@@ -26,11 +29,14 @@ function UserAccounts({ accounts }) {
       <div className="accounts__card">
         <RenderAccounts accounts={accounts} />
         <div className="avatar__div">
-          <img
-            src={require("../assets/images/add_sign.png").default}
-            alt="account__avatar"
-            className="account__avatar img-thumbnail"
-          />
+          <Link to="/accounts/create">
+            <img
+              src={require("../assets/images/add_sign.png").default}
+              alt="account__avatar"
+              className="account__avatar img-thumbnail"
+              role="button"
+            />
+          </Link>
           <h5 className="account__name">Add Profile</h5>
         </div>
       </div>
