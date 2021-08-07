@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import "../css/UserAccounts.css";
+import { FaPlus } from "react-icons/fa";
 import { Container, Row, Col, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -30,10 +31,9 @@ function UserAccounts({ accounts }) {
         <RenderAccounts accounts={accounts} />
         <div className="avatar__div">
           <Link to="/accounts/create">
-            <img
-              src={require("../assets/images/add_sign.png").default}
-              alt="account__avatar"
-              className="account__avatar img-thumbnail"
+            <FaPlus
+              style={{ backgroundColor: "#111", color: "grey", border: "none" }}
+              className="account__avatar img-thumbnail add__profile__avatar"
               role="button"
             />
           </Link>

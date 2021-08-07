@@ -4,6 +4,7 @@ import {
   Route,
   Switch,
   Redirect,
+  Link,
 } from "react-router-dom";
 import GenreCarousels from "./components/GenreCarousels";
 import UserAccounts from "./components/UserAccounts";
@@ -13,32 +14,35 @@ const accounts = [
   {
     name: "Main",
     id: "1XLSLRL",
-    image: require("./assets/images/wolf_avatar.jfif"),
+    image: require("./assets/images/green_avatar.png"),
   },
   {
     name: "Secondary",
     id: "1XLSRR",
-    image: require("./assets/images/cat_avatar.jfif"),
+    image: require("./assets/images/yellow_avatar.png"),
   },
   {
     name: "Guest",
     id: "1XLSRT",
-    image: require("./assets/images/panda_avatar.jfif"),
+    image: require("./assets/images/green_glasses_avatar.png"),
   },
   {
     name: "Another",
     id: "1XLSLRT",
-    image: require("./assets/images/wolf_avatar.jfif"),
+    image: require("./assets/images/orange_avatar.png"),
   },
 ];
 
 function RenderUserAccounts() {
   return (
     <div className="accounts__div">
-      <img
-        src={require("./assets/images/netflix_logo.png").default}
-        className="netflix__img__header"
-      />
+      <Link to="/">
+        <img
+          src={require("./assets/images/netflix_logo.png").default}
+          className="netflix__img__header"
+          role="button"
+        />
+      </Link>
       <UserAccounts accounts={accounts} />
     </div>
   );

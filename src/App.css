@@ -11,6 +11,12 @@
   min-height: 100vh;
 }
 
+@media only screen and (max-width: 675px) {
+  .accounts__div:first-child {
+    text-align: center;
+  }
+}
+
 .netflix__img__header {
   margin: 15px;
   height: 75px;
