@@ -69,6 +69,7 @@ function App() {
         <Route exact path="/" component={GenreCarousels} />
         <Route exact path="/accounts" component={RenderUserAccounts} />
         <Route path="/accounts/create" component={RenderAddAccount} />
+        {/* <Route path="/accounts/edit/:id" component={RenderAccountEdit} /> */}
       </Switch>
     </Router>
   );
