@@ -32,20 +32,22 @@ function UserAccounts({ accounts }) {
         <h1 className="accounts__title">Who's watching?</h1>
         <div className="accounts__card">
           <RenderAccounts accounts={accounts} />
-          <div className="avatar__div">
-            <Link to="/accounts/create">
-              <FaPlus
-                style={{
-                  backgroundColor: "#111",
-                  color: "grey",
-                  border: "none",
-                }}
-                className="account__avatar img-thumbnail add__profile__avatar"
-                role="button"
-              />
-            </Link>
-            <h5 className="account__name">Add Profile</h5>
-          </div>
+          {accounts.length < 5 && (
+            <div className="avatar__div">
+              <Link to="/accounts/create">
+                <FaPlus
+                  style={{
+                    backgroundColor: "#111",
+                    color: "grey",
+                    border: "none",
+                  }}
+                  className="account__avatar img-thumbnail add__profile__avatar"
+                  role="button"
+                />
+              </Link>
+              <h5 className="account__name">Add Profile</h5>
+            </div>
+          )}
         </div>
         <Button
           className="manage__profile__btn"

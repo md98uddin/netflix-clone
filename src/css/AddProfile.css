@@ -3,14 +3,15 @@
   margin-top: 150px;
 }
 
-.account__avatar {
+.account__avatar__create {
   width: 140px !important;
   height: 140px !important;
-  margin-left: 30px;
+  margin-left: 135px;
 }
 
 .add__profile__title {
   color: white;
+  margin-right: 240px;
 }
 
 .add__profile__subtitle {
@@ -23,9 +24,26 @@
 }
 
 .input {
-  width: 300px;
+  width: 330px;
+  height: 35px;
   margin-left: 20px;
   background: grey;
+}
+
+::placeholder {
+  color: white;
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+  background-color: red;
+  transform: scale(2.5);
+  margin-left: 20px;
+}
+
+.kids__label {
+  color: white;
+  margin-left: 15px;
 }
 
 .hr-rule {
@@ -37,4 +55,9 @@
 
 .btn {
   margin: 5px;
+  border-radius: 0px;
+}
+
+.button__group {
+  margin-right: 225px;
 }

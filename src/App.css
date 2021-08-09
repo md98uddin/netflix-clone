@@ -12,7 +12,8 @@
 }
 
 @media only screen and (max-width: 675px) {
-  .accounts__div:first-child {
+  .accounts__div,
+  .add__profile__div:first-child {
     text-align: center;
   }
 }

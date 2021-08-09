@@ -31,6 +31,11 @@ const accounts = [
     id: "1XLSLRT",
     image: require("./assets/images/orange_avatar.png"),
   },
+  // {
+  //   name: "Fifth",
+  //   id: "1XLSLRN",
+  //   image: require("./assets/images/orange_avatar.png"),
+  // },
 ];
 
 function RenderUserAccounts() {
@@ -51,6 +56,13 @@ function RenderUserAccounts() {
 function RenderAddAccount() {
   return (
     <div className="add__profile__div">
+      <Link to="/">
+        <img
+          src={require("./assets/images/netflix_logo.png").default}
+          className="netflix__img__header"
+          role="button"
+        />
+      </Link>
       <AddProfile />
     </div>
   );
