@@ -14,21 +14,25 @@ const accounts = [
   {
     name: "Main",
     id: "1XLSLRL",
+    isKid: false,
     image: require("./assets/images/green_avatar.png"),
   },
   {
     name: "Secondary",
     id: "1XLSRR",
+    isKid: true,
     image: require("./assets/images/yellow_avatar.png"),
   },
   {
     name: "Guest",
     id: "1XLSRT",
+    isKid: false,
     image: require("./assets/images/green_glasses_avatar.png"),
   },
   {
     name: "Another",
     id: "1XLSLRT",
+    isKid: false,
     image: require("./assets/images/orange_avatar.png"),
   },
 ];
@@ -51,6 +55,13 @@ function RenderUserAccounts() {
 function RenderAddAccount() {
   return (
     <div className="add__profile__div">
+      <Link to="/">
+        <img
+          src={require("./assets/images/netflix_logo.png").default}
+          className="netflix__img__header"
+          role="button"
+        />
+      </Link>
       <AddProfile />
     </div>
   );
@@ -69,6 +80,7 @@ function App() {
         <Route exact path="/" component={GenreCarousels} />
         <Route exact path="/accounts" component={RenderUserAccounts} />
         <Route path="/accounts/create" component={RenderAddAccount} />
+        {/* <Route path="/accounts/edit/:id" component={RenderAccountEdit} /> */}
       </Switch>
     </Router>
   );
