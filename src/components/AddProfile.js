@@ -9,6 +9,7 @@ function AddProfile() {
   const [profile, setProfile] = useState({
     name: null,
     isKid: false,
+    image: require("../assets/images/orange_avatar.png"),
   });
 
   return (
@@ -28,7 +29,12 @@ function AddProfile() {
             className="account__avatar__create img-thumbnail"
             role="button"
           />
-          <input type="text" className="input" placeholder="Name" />
+          <input
+            type="text"
+            className="input"
+            placeholder="Name"
+            onChange={(event) => console.log(event.target.value)}
+          />
           <input type="checkbox" className="kids__check" />
           <label className="kids__label">Kid?</label>
         </div>

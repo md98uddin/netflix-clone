@@ -4,8 +4,8 @@
 }
 
 .account__avatar__create {
-  width: 140px !important;
-  height: 140px !important;
+  width: 140px;
+  height: 140px;
   margin-left: 135px;
 }
 
@@ -60,4 +60,74 @@ input[type="checkbox"] {
 
 .button__group {
   margin-right: 225px;
+  margin-top: -15px;
+}
+
+@media only screen and (max-width: 1375px) {
+  .button__group {
+    margin-top: -60px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .profile__main {
+    margin-right: 50px;
+  }
+  .add__profile__title {
+    margin-right: 245px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .profile__main {
+    margin-right: 120px;
+  }
+
+  .add__profile__title {
+    margin-right: 260px;
+  }
+
+  .account__avatar__create {
+    margin-left: 100px;
+    height: 135px;
+    width: 135px;
+  }
+
+  .input {
+    width: 300px;
+  }
+
+  .hr-rule {
+    margin-left: 6.5em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .add__profile__title {
+    margin-right: -120px;
+  }
+
+  .add__profile__subtitle {
+    margin-right: -120px;
+  }
+
+  .account__avatar__create {
+    margin-left: 100px;
+    height: 120px;
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+  .input {
+    width: 210px;
+    margin-left: 120px;
+  }
+
+  .hr-rule {
+    margin-left: 2em;
+  }
+
+  .button__group {
+    margin-right: 145px;
+  }
 }

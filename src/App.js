@@ -14,28 +14,27 @@ const accounts = [
   {
     name: "Main",
     id: "1XLSLRL",
+    isKid: false,
     image: require("./assets/images/green_avatar.png"),
   },
   {
     name: "Secondary",
     id: "1XLSRR",
+    isKid: true,
     image: require("./assets/images/yellow_avatar.png"),
   },
   {
     name: "Guest",
     id: "1XLSRT",
+    isKid: false,
     image: require("./assets/images/green_glasses_avatar.png"),
   },
   {
     name: "Another",
     id: "1XLSLRT",
+    isKid: false,
     image: require("./assets/images/orange_avatar.png"),
   },
-  // {
-  //   name: "Fifth",
-  //   id: "1XLSLRN",
-  //   image: require("./assets/images/orange_avatar.png"),
-  // },
 ];
 
 function RenderUserAccounts() {
