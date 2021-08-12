@@ -131,3 +131,108 @@ input[type="checkbox"] {
     margin-right: 145px;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  .account__avatar__create {
+    margin-left: 130px;
+    height: 110px;
+    width: 110px;
+    margin-bottom: 20px;
+  }
+
+  .input {
+    width: 190px;
+    margin-left: 110px;
+  }
+
+  input[type="checkbox"] {
+    background-color: red;
+    transform: scale(2);
+    margin-left: 140px;
+    margin-top: 20px;
+  }
+
+  .kids__label {
+    color: white;
+    margin-left: 10px;
+  }
+
+  .hr-rule {
+    margin-left: 2em;
+  }
+
+  .button__group {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .profile__main {
+    margin-top: 100px;
+  }
+
+  .input {
+    width: 190px;
+    margin-left: 90px;
+  }
+
+  .button__group {
+    margin-right: -20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .profile__main {
+    margin-top: 100px;
+  }
+  .button__group {
+    margin-right: -35px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .profile__main {
+    margin-top: 30px;
+  }
+
+  .account__avatar__create {
+    margin-left: 120px;
+  }
+
+  .input {
+    margin-left: 75px;
+  }
+
+  .button__group {
+    margin-right: -70px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .account__avatar__create {
+    margin-left: 100px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .input {
+    margin-left: 50px;
+  }
+
+  input[type="checkbox"] {
+    background-color: red;
+    transform: scale(1);
+    margin-left: 130px;
+    margin-top: 25px;
+  }
+
+  .kids__label {
+    margin-left: 130px;
+  }
+
+  .button__group {
+    margin-right: -110px;
+  }
+}
