@@ -44,6 +44,7 @@ function RenderUserAccounts() {
         <img
           src={require("./assets/images/netflix_logo.png").default}
           className="netflix__img__header"
+          alt="netflix__img__header"
           role="button"
         />
       </Link>
@@ -52,26 +53,38 @@ function RenderUserAccounts() {
   );
 }
 
-function RenderAddAccount() {
+function RenderAddAccount({ submitProfile, accounts }) {
   return (
     <div className="add__profile__div">
       <Link to="/">
         <img
           src={require("./assets/images/netflix_logo.png").default}
           className="netflix__img__header"
+          alt="netflix__img__header"
           role="button"
         />
       </Link>
-      <AddProfile />
+      <AddProfile submitProfile={submitProfile} accounts={accounts} />
     </div>
   );
 }
 
 function App() {
   const [profiles, addProfile] = useState(accounts);
+  const [errorMsg, setErrMsg] = useState({});
 
-  function addAccount(account) {
-    addProfile(accounts.push(account));
+  function submitProfile(newAccount) {
+    if (newAccount.name && newAccount.name.length > 3) {
+      setErrMsg({});
+      accounts.push(newAccount);
+    } else {
+      setErrMsg({
+        ...errorMsg,
+        errorMsg: "Name should be minimum 3 characters",
+        errorType: "InvalidFormInput/n" + JSON.stringify({ name: "invalid" }),
+      });
+      console.log(errorMsg);
+    }
   }
 
   return (
@@ -79,7 +92,15 @@ function App() {
       <Switch>
         <Route exact path="/" component={GenreCarousels} />
         <Route exact path="/accounts" component={RenderUserAccounts} />
-        <Route path="/accounts/create" component={RenderAddAccount} />
+        <Route
+          path="/accounts/create"
+          render={(props) => (
+            <RenderAddAccount
+              submitProfile={submitProfile}
+              accounts={accounts}
+            />
+          )}
+        />
         {/* <Route path="/accounts/edit/:id" component={RenderAccountEdit} /> */}
       </Switch>
     </Router>

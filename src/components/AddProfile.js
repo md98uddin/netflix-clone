@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import "../css/AddProfile.css";
-import { Button, Input } from "reactstrap";
+import { Button } from "reactstrap";
 import fadeIn from "react-animations/lib/fade-in";
 import Radium, { StyleRoot } from "radium";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-function AddProfile() {
+function AddProfile({ submitProfile, accounts }) {
   const [profile, setProfile] = useState({
     name: null,
     isKid: false,
     image: require("../assets/images/orange_avatar.png"),
+    id: "RLSXA" + Math.random() + 10,
   });
+
+  let history = useHistory();
 
   return (
     <StyleRoot>
@@ -33,9 +36,22 @@ function AddProfile() {
             type="text"
             className="input"
             placeholder="Name"
-            onChange={(event) => console.log(event.target.value)}
+            name="name"
+            onChange={(event) =>
+              setProfile({
+                ...profile,
+                [event.target.name]: event.target.value,
+              })
+            }
           />
-          <input type="checkbox" className="kids__check" />
+          <input
+            type="checkbox"
+            className="kids__check"
+            name="isKid"
+            onChange={(event) =>
+              setProfile({ ...profile, isKid: !profile.isKid })
+            }
+          />
           <label className="kids__label">Kid?</label>
         </div>
         <hr className="hr-rule" />
@@ -47,6 +63,10 @@ function AddProfile() {
               backgroundColor: "#e50914",
               color: "white",
               borderRadius: 0,
+            }}
+            onClick={() => {
+              submitProfile(profile);
+              history.push("/accounts");
             }}
           >
             CONTINUE

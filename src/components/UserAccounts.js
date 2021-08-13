@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import "../css/UserAccounts.css";
 import { FaPlus } from "react-icons/fa";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import fadeIn from "react-animations/lib/fade-in";
 import Radium, { StyleRoot } from "radium";
