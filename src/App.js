@@ -83,7 +83,6 @@ function App() {
         errorMsg: "Name should be minimum 3 characters",
         errorType: "InvalidFormInput/n" + JSON.stringify({ name: "invalid" }),
       });
-      console.log(errorMsg);
     }
   }
 
