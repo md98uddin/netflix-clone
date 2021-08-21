@@ -6,7 +6,7 @@ import {
   DropdownToggle,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import { FaHamburger } from "react-icons/fa";
+import { FaHamburger, FaSearch, FaGift, FaBell } from "react-icons/fa";
 import "../../css/NavLoggedIn.css";
 
 const NavLoggedIn = () => {
@@ -26,7 +26,11 @@ const NavLoggedIn = () => {
             {["Home", "TV Shows", "Movies", "New & Popular", "My List"].map(
               (category) => (
                 <Link
-                  to={`/view/${category.toLowerCase()}`}
+                  to={
+                    category === "Home"
+                      ? "/"
+                      : `/view/${category.toLowerCase()}`
+                  }
                   className="list__link"
                 >
                   <li key={category} className="list-center" role="button">
@@ -35,6 +39,25 @@ const NavLoggedIn = () => {
                 </Link>
               )
             )}
+          </ul>
+        </div>
+        <div className="nav__list__right lg__screen">
+          <ul className="nav__list">
+            <li role="button">
+              <FaSearch />
+            </li>
+            <li role="button">DVD</li>
+            <li role="button">
+              <FaGift />
+            </li>
+            <li role="button">
+              <FaBell />
+            </li>
+            <img
+              src={require("../../assets/images/orange_avatar.png").default}
+              alt="account picture"
+              className="account__img"
+            />
           </ul>
         </div>
         <div className="nav__dropdown__container sm__screen">
