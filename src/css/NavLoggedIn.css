@@ -54,6 +54,33 @@ li {
   padding: 0.05em;
 }
 
+.inactive {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.hide-active {
+  display: none;
+}
+
+.search-bar {
+  width: 12em;
+}
+
+input::placeholder {
+  color: black;
+  font-size: 0.75em;
+}
+
+@media (max-width: 64em) and (min-width: 40em) {
+  .nav__list__right {
+    display: none;
+  }
+}
+
 @media (max-width: 40em) {
   .lg__screen {
     display: none;
