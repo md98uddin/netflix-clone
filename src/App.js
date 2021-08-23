@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import GenreCarousels from "./components/GenreCarousels";
 import UserAccounts from "./components/UserAccounts";
 import AddProfile from "./components/AddProfile";
@@ -70,7 +64,6 @@ function RenderAddAccount({ submitProfile, accounts }) {
 }
 
 function App() {
-  const [profiles, addProfile] = useState(accounts);
   const [errorMsg, setErrMsg] = useState({});
 
   function submitProfile(newAccount) {

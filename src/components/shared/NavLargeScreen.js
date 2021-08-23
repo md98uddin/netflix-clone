@@ -56,9 +56,17 @@ const NavLargeScreen = () => {
         <ul className="nav__list" ref={searchInput}>
           <li className="search-icon" key="search-icon" role="button">
             {!active ? (
-              <FaSearch className="search" onClick={() => toggleSearch()} />
+              <FaSearch
+                className="search"
+                onClick={() => toggleSearch()}
+                data-testid="search-icon"
+              />
             ) : (
-              <FiX className="search" onClick={() => toggleSearch()} />
+              <FiX
+                className="search"
+                onClick={() => toggleSearch()}
+                data-testid="search-icon"
+              />
             )}
           </li>
           <SearchBar active={active} toggleSearch={toggleSearch} />
@@ -73,7 +81,7 @@ const NavLargeScreen = () => {
           </li>
           <img
             src={require("../../assets/images/orange_avatar.png").default}
-            alt="account picture"
+            alt="account icon"
             className="account__img"
             key="account-icon"
           />
