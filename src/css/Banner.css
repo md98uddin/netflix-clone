@@ -1,3 +1,15 @@
+header {
+  background-color: linear-gradient(
+    to left,
+    rgb(0, 0, 0, 0),
+    rgb(0, 0, 1, 0.75),
+    rgb(0, 0, 0, 1)
+  );
+  background-size: "cover";
+  background-position: "center center";
+  max-width: 100%;
+}
+
 .banner {
   color: white;
   object-fit: contain;
@@ -18,10 +30,10 @@
 
 .banner__description {
   width: 45rem;
-  line-height: 1.3rem;
+  line-height: 1.75rem;
   padding-top: 1rem;
-  font-size: 0.8rem;
-  max-width: 360px;
+  font-size: 1rem;
+  max-width: 32em;
   height: 80px;
 }
 
