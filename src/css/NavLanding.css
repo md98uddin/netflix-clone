@@ -1,0 +1,68 @@
+.landing__page__container {
+  background-size: 100vh;
+  background-position: center;
+  height: 100vh;
+  background: linear-gradient(
+      0deg,
+      rgb(0, 0, 0, 0.8),
+      rgb(0, 0, 0, 0.1) 40%,
+      rgb(0, 0, 0, 0.8)
+    ),
+    url("../assets/images/landing_bkg_image.jpg");
+  text-align: center;
+}
+
+* {
+  margin: 0;
+}
+
+.nav-div {
+  height: 4.5em;
+  display: flex;
+}
+
+.netflix__logo {
+  height: 6.5em;
+  width: 10em;
+  margin-left: 2.5em;
+}
+
+.lang__sign__in__container {
+  display: flex;
+  margin-left: auto;
+  margin-top: 2em;
+  margin-right: 3em;
+}
+
+.lang__sign__in__container > * + * {
+  margin-left: 3em;
+}
+
+.header-container {
+  text-align: center;
+  margin-top: 22vh;
+}
+
+.header-title {
+  align-items: center;
+  display: inline-block;
+  width: 10em;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-weight: 1000;
+  padding: 0.75em;
+}
+
+.header-caption {
+  font-weight: 1200;
+  font-size: 1.2em;
+}
+
+.email-input {
+  height: 4em;
+  width: 30em;
+  margin-right: 11em;
+}

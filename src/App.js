@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import GenreCarousels from "./components/GenreCarousels";
 import UserAccounts from "./components/UserAccounts";
 import AddProfile from "./components/AddProfile";
+import LandingPage from "./components/LandingPage";
 
 const accounts = [
   {
@@ -82,7 +83,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={GenreCarousels} />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/view" component={GenreCarousels} />
         <Route exact path="/accounts" component={RenderUserAccounts} />
         <Route
           path="/accounts/create"

@@ -1,0 +1,15 @@
+import React from "react";
+import NavLanding from "./shared/NavLanding";
+import "../css/NavLanding.css";
+import LandingHeader from "./shared/LandingHeader";
+
+const LandingPage = () => {
+  return (
+    <div className="landing__page__container">
+      <NavLanding />
+      <LandingHeader />
+    </div>
+  );
+};
+
+export default LandingPage;
