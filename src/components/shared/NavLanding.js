@@ -34,7 +34,7 @@ const NavLanding = () => {
         >
           <DropdownToggle
             style={{
-              height: "2.3em",
+              height: "2.2em",
               backgroundColor: "#111",
               width: "7em",
               fontSize: "1em",
@@ -45,9 +45,15 @@ const NavLanding = () => {
             English
             <BsCaretDownFill />
           </DropdownToggle>
-          <DropdownMenu>
-            <DropdownItem>English</DropdownItem>
-            <DropdownItem>Spanish</DropdownItem>
+          <DropdownMenu
+            style={{
+              color: "white",
+              backgroundColor: "rgb(10,10,10, 0.9)",
+              marginTop: "0.6em",
+            }}
+          >
+            <DropdownItem style={{ color: "white" }}>English</DropdownItem>
+            <DropdownItem style={{ color: "white" }}>Spanish</DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <Button
@@ -55,9 +61,10 @@ const NavLanding = () => {
           style={{
             width: "6em",
             height: "2.3em",
-            backgroundColor: "#e50914",
+            backgroundColor: "#d40610",
             fontSize: "1em",
           }}
+          className="signin__btn"
         >
           Sign In
         </Button>

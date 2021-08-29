@@ -5,9 +5,11 @@ import LandingHeader from "./shared/LandingHeader";
 
 const LandingPage = () => {
   return (
-    <div className="landing__page__container">
-      <NavLanding />
-      <LandingHeader />
+    <div className="wrapper__landing">
+      <div className="landing__page__container">
+        <NavLanding />
+        <LandingHeader />
+      </div>
     </div>
   );
 };
