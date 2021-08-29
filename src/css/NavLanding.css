@@ -1,0 +1,168 @@
+.landing__page__container {
+  background-image: linear-gradient(
+      0deg,
+      rgb(0, 0, 0, 0.8),
+      rgb(0, 0, 0, 0.5) 40%,
+      rgb(0, 0, 0, 0.8)
+    ),
+    url("../assets/images/landing_bkg_image.jpg");
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+}
+
+.nav-div {
+  height: 4.5em;
+  display: flex;
+}
+
+.netflix__logo {
+  height: 6.5em;
+  width: 10em;
+  margin-left: 2.5em;
+}
+
+.lang__sign__in__container {
+  display: flex;
+  margin-left: auto;
+  margin-top: 2em;
+  margin-right: 3em;
+}
+
+.lang__sign__in__container > * + * {
+  margin-left: 3em;
+}
+
+.header-container {
+  text-align: center;
+  margin-top: 22vh;
+}
+
+.header-title {
+  align-items: center;
+  display: inline-block;
+  width: 11em;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-weight: 450;
+  padding: 0.75em;
+}
+
+.header-caption {
+  font-weight: 1200;
+  font-size: 1.2em;
+  color: white;
+}
+
+.email-input {
+  height: 3.75em;
+  width: 30em;
+  margin-left: auto;
+}
+
+.submit__email__btn {
+  margin-left: 0;
+  padding: 0;
+  height: 3.75em;
+  width: 13rem;
+  border-radius: 0px;
+  border-width: 0px;
+  background-color: #d40610 !important;
+  border: none;
+}
+
+.submit__email__p {
+  font-size: 25px;
+  margin-top: 0.25em;
+}
+
+/* screen sizes below 695px/43.5em */
+
+@media (max-width: 46em) {
+  .email-input {
+    height: 3em;
+    width: 24em;
+  }
+  .submit__email__btn {
+    width: 10em;
+    height: 3em;
+  }
+
+  .submit__email__p {
+    font-size: 18px;
+  }
+
+  .header-title {
+    font-size: 2.5em;
+  }
+
+  .header-subtitle {
+    font-size: 1.5em;
+  }
+
+  .header-caption {
+    font-size: 0.95em;
+  }
+
+  .netflix__logo {
+    height: 5.5em;
+    width: 8em;
+  }
+
+  .drop-toggle {
+    height: 2em !important;
+    width: 7em !important;
+  }
+
+  .signin__btn {
+    height: 2em !important;
+    width: 4.5em !important;
+  }
+}
+
+@media (max-width: 30em) {
+  .header-title {
+    font-size: 2.2em;
+  }
+
+  .header-subtitle {
+    font-size: 1.3em;
+  }
+
+  .header-caption {
+    font-size: 0.85em;
+  }
+
+  .netflix__logo {
+    height: 4em;
+    width: 6em;
+  }
+
+  .drop-toggle {
+    height: 1.8em !important;
+    width: 6.75em !important;
+  }
+
+  .signin__btn {
+    height: 2em !important;
+    width: 4.3em !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .email-input {
+    width: 22em;
+  }
+
+  .header-title {
+    font-size: 2.1em;
+  }
+}

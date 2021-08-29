@@ -9,7 +9,7 @@
 }
 
 .nav__container {
-  height: 4em;
+  height: 3.5em;
 }
 
 .nav__list > * + * {
@@ -41,6 +41,44 @@ li {
 
 .sm__screen {
   display: none;
+}
+
+.nav__list__right {
+  margin-left: auto;
+  margin-right: 4em;
+}
+
+.account__img {
+  display: block;
+  max-width: 2.2em;
+  padding: 0.05em;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.hide-active {
+  display: none;
+}
+
+.search-bar {
+  width: 12em;
+}
+
+input::placeholder {
+  color: black;
+  font-size: 0.75em;
+}
+
+@media (max-width: 64em) and (min-width: 40em) {
+  .nav__list__right {
+    display: none;
+  }
 }
 
 @media (max-width: 40em) {
