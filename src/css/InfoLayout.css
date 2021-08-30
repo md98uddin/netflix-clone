@@ -1,0 +1,38 @@
+.layout {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.split {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600 !important;
+  font-size: 5vw !important;
+  text-align: center;
+  margin-top: 5vh !important;
+  padding-bottom: 10px !important;
+}
+
+p {
+  display: inline-block;
+  width: 75%;
+  text-align: left;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.hr {
+  height: 0.5em;
+  background-color: #212529;
+}
+
+@media (max-width: 950px) {
+  .layout {
+    flex-direction: column;
+  }
+}
