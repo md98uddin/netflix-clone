@@ -8,22 +8,37 @@
 .split {
   flex-basis: 50%;
   text-align: center;
+  padding: 1em;
 }
 
-h1 {
+.enjoy_header,
+.download_header,
+.watch_header,
+.create_header {
   font-weight: 600 !important;
-  font-size: 5vw !important;
-  text-align: center;
+  font-size: 4.5vw !important;
   margin-top: 5vh !important;
   padding-bottom: 10px !important;
+  text-align: center;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
 }
 
-p {
+.enjoy_caption,
+.download_caption,
+.watch_caption,
+.create_caption {
   display: inline-block;
   width: 75%;
   text-align: left;
   font-size: 2vw;
-  font-weight: bold;
+  font-weight: 300;
+}
+
+.enjoy_image,
+.download_header {
+  width: 40vw;
 }
 
 .hr {
@@ -34,5 +49,20 @@ p {
 @media (max-width: 950px) {
   .layout {
     flex-direction: column;
+  }
+
+  .enjoy_header,
+  .download_header,
+  .watch_header,
+  .create.caption {
+    font-size: 6vw !important;
+    width: 100vw;
+  }
+
+  .enjoy_caption,
+  .download_caption,
+  .watch_caption,
+  .create_caption {
+    font-size: 3.5vw;
   }
 }

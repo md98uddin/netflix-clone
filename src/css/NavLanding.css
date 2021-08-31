@@ -72,7 +72,7 @@
   margin-left: 0;
   padding: 0;
   height: 3.75em;
-  width: 13rem;
+  width: 13.5rem;
   border-radius: 0px;
   border-width: 0px;
   background-color: #d40610 !important;
@@ -80,8 +80,8 @@
 }
 
 .submit__email__p {
-  font-size: 25px;
-  margin-top: 0.25em;
+  font-size: 21px;
+  margin-top: 0.4em;
 }
 
 /* screen sizes below 695px/43.5em */
@@ -92,12 +92,13 @@
     width: 24em;
   }
   .submit__email__btn {
-    width: 10em;
+    width: 12em;
     height: 3em;
   }
 
   .submit__email__p {
     font-size: 18px;
+    margin-top: 0.3em;
   }
 
   .header-title {
