@@ -41,9 +41,48 @@
   width: 40vw;
 }
 
+.faq {
+  flex-direction: column;
+}
+
 .hr {
   height: 0.5em;
   background-color: #212529;
+}
+
+.faq_header {
+  margin-top: 10vh;
+  padding-bottom: 3vh;
+  font-weight: bolder;
+}
+
+.accordion {
+  width: 60vw;
+}
+
+.accordion > * {
+  margin-top: 0.5em;
+  background-color: #303030 !important;
+  color: white;
+}
+
+.accordion-button {
+  color: white !important;
+  background-color: #303030 !important;
+}
+
+.accordion-body {
+  font-size: 1.9vw !important;
+  padding: 3vw !important;
+}
+
+.accordion-collapse {
+  margin-bottom: 2em !important;
+}
+
+.accordion-button {
+  font-size: 1.9vw !important;
+  padding: 1.5vw !important;
 }
 
 @media (max-width: 950px) {
@@ -52,11 +91,19 @@
   }
 
   .enjoy_header,
-  .download_header,
   .watch_header,
   .create.caption {
     font-size: 6vw !important;
     width: 100vw;
+  }
+
+  .download_header {
+    width: 80vw;
+  }
+
+  .accordion-button,
+  .accordion-body {
+    font-size: 2.5vw !important;
   }
 
   .enjoy_caption,
@@ -64,5 +111,9 @@
   .watch_caption,
   .create_caption {
     font-size: 3.5vw;
+  }
+
+  .accordion {
+    width: 90vw;
   }
 }

@@ -1,5 +1,9 @@
 import React from "react";
 import "../../css/InfoLayout.css";
+import "../../css/NavLanding.css";
+import FaqAccordion from "./FaqAccordion";
+import { Button } from "reactstrap";
+import { AiOutlineRight } from "react-icons/ai";
 
 const InfoLayout = () => {
   return (
@@ -17,6 +21,7 @@ const InfoLayout = () => {
           <img
             src={require("../../assets/images/grid-1-image.png").default}
             className="enjoy_image"
+            alt="grid 1"
           />
         </div>
       </div>
@@ -26,6 +31,7 @@ const InfoLayout = () => {
           <img
             src={require("../../assets/images/grid-2-image.jpg").default}
             className="enjoy_image"
+            alt="grid 2"
           />
         </div>
         <div className="split">
@@ -50,6 +56,7 @@ const InfoLayout = () => {
           <img
             src={require("../../assets/images/grid-3-image.png").default}
             className="enjoy_image"
+            alt="grid 3"
           />
         </div>
       </div>
@@ -59,6 +66,7 @@ const InfoLayout = () => {
           <img
             src={require("../../assets/images/grid-4-image.png").default}
             className="enjoy_image"
+            alt="grid 4"
           />
         </div>
         <div className="split">
@@ -71,8 +79,10 @@ const InfoLayout = () => {
       </div>
       <div className="hr"></div>
       <div className="layout faq">
-        <h1>Frequently Asked Questions</h1>
+        <h1 className="faq_header">Frequently Asked Questions</h1>
+        <FaqAccordion />
       </div>
+      <div className="hr"></div>
     </div>
   );
 };
