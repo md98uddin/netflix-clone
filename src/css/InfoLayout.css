@@ -1,0 +1,139 @@
+.layout {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.split {
+  flex-basis: 50%;
+  text-align: center;
+  padding: 1em;
+}
+
+.enjoy_header,
+.download_header,
+.watch_header,
+.create_header {
+  font-weight: 600 !important;
+  font-size: 4.5vw !important;
+  margin-top: 5vh !important;
+  padding-bottom: 10px !important;
+  text-align: center;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+}
+
+.enjoy_caption,
+.download_caption,
+.watch_caption,
+.create_caption {
+  display: inline-block;
+  width: 75%;
+  text-align: left;
+  font-size: 2vw;
+  font-weight: 300;
+}
+
+.enjoy_image,
+.download_header {
+  width: 40vw;
+}
+
+.faq {
+  flex-direction: column;
+}
+
+.hr {
+  height: 0.5em;
+  background-color: #212529;
+}
+
+.faq_header {
+  margin-top: 10vh;
+  padding-bottom: 3vh;
+  font-weight: bolder;
+  font-size: 3vw;
+}
+
+.accordion {
+  width: 60vw;
+}
+
+.accordion > * {
+  margin-top: 0.5em;
+  background-color: #303030 !important;
+  color: white;
+}
+
+.accordion-button {
+  color: white !important;
+  background-color: #303030 !important;
+}
+
+.accordion-body {
+  font-size: 1.9vw !important;
+  padding: 3vw !important;
+}
+
+.accordion-collapse {
+  margin-bottom: 2em !important;
+}
+
+.accordion-button {
+  font-size: 1.9vw !important;
+  padding: 1.5vw !important;
+}
+
+.email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em !important;
+}
+
+@media (max-width: 950px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .faq_header {
+    font-size: 5vw;
+  }
+
+  .enjoy_header,
+  .watch_header,
+  .create.caption {
+    font-size: 6vw !important;
+    width: 100vw;
+  }
+
+  .download_header {
+    width: 80vw;
+  }
+
+  .accordion-button,
+  .accordion-body {
+    font-size: 2.9vw !important;
+  }
+
+  .enjoy_caption,
+  .download_caption,
+  .watch_caption,
+  .create_caption {
+    font-size: 3.5vw;
+  }
+
+  .enjoy_image {
+    width: 60vw;
+  }
+
+  .accordion {
+    width: 90vw;
+  }
+
+  .email-container {
+    flex-direction: column;
+  }
+}
