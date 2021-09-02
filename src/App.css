@@ -12,6 +12,10 @@ body {
   font-family: sans-serif;
 }
 
+*:focus {
+  outline: none;
+}
+
 .app,
 .accounts__div,
 .add__profile__div {

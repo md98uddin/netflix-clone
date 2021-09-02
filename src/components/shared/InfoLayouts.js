@@ -4,6 +4,7 @@ import "../../css/NavLanding.css";
 import FaqAccordion from "./FaqAccordion";
 import { Button } from "reactstrap";
 import { AiOutlineRight } from "react-icons/ai";
+import Footer from "./Footer";
 
 const InfoLayout = () => {
   return (
@@ -81,8 +82,34 @@ const InfoLayout = () => {
       <div className="layout faq">
         <h1 className="faq_header">Frequently Asked Questions</h1>
         <FaqAccordion />
+        <h6
+          className="header-caption text-white"
+          style={{
+            marginTop: "2em",
+            textAlign: "center",
+          }}
+        >
+          Ready to watch? Enter your email to create or restart your membership.
+        </h6>
+        <div className="email-container">
+          <input
+            type="text"
+            className="email-input"
+            placeholder="Email address"
+          />
+          <Button className="submit__email__btn">
+            <p className="submit__email__p">
+              {" "}
+              Get Started
+              <AiOutlineRight
+                style={{ marginLeft: "0.25em", borderWidth: "1px" }}
+              />
+            </p>
+          </Button>
+        </div>
       </div>
       <div className="hr"></div>
+      <Footer />
     </div>
   );
 };

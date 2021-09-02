@@ -54,6 +54,7 @@
   margin-top: 10vh;
   padding-bottom: 3vh;
   font-weight: bolder;
+  font-size: 3vw;
 }
 
 .accordion {
@@ -85,9 +86,20 @@
   padding: 1.5vw !important;
 }
 
+.email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em !important;
+}
+
 @media (max-width: 950px) {
   .layout {
     flex-direction: column;
+  }
+
+  .faq_header {
+    font-size: 5vw;
   }
 
   .enjoy_header,
@@ -103,7 +115,7 @@
 
   .accordion-button,
   .accordion-body {
-    font-size: 2.5vw !important;
+    font-size: 2.9vw !important;
   }
 
   .enjoy_caption,
@@ -113,7 +125,15 @@
     font-size: 3.5vw;
   }
 
+  .enjoy_image {
+    width: 60vw;
+  }
+
   .accordion {
     width: 90vw;
+  }
+
+  .email-container {
+    flex-direction: column;
   }
 }
